@@ -1,0 +1,33 @@
+.header {
+  background-color: var(--red);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* logoyu ve breadcrumb’u ortalar */
+  justify-content: center;
+  text-align: center;
+}
+
+.header-logo {
+  height: auto;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.header-breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: white;
+}
+
+.header-breadcrumb a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.header-breadcrumb span {
+  color: white;
+}
