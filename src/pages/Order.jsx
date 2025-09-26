@@ -13,8 +13,20 @@ export default function Order({ setOrderData }) {
   const toppingPrice = 5;
 
   const toppingsList = [
-    "Pepperoni", "Sosis", "Kanada Jambonu", "Tavuk Izgara", "Soğan", "Domates",
-    "Mısır", "Jalepeno", "Sucuk", "Ananas", "Kabak"
+    "Pepperoni",
+    "Domates",
+    "Biber",
+    "Sosis",
+    "Mısır",
+    "Sucuk",
+    "Kanada Jambonu",
+    "Sucuk",
+    "Ananas",
+    "Tavuk Izgara",
+    "Jalepeno",
+    "Kabak",
+    "Soğan",
+    "Sarımsak"
   ];
 
   const [formData, setFormData] = useState({
