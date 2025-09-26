@@ -132,6 +132,20 @@ export default function Order({ setOrderData }) {
 
         <section className="order-form">
           <form onSubmit={handleSubmit}>
+            <div className="order-name">
+                <h3 className="field-title">Ad Soyad <span className="required">*</span></h3>
+                <input
+                    className="name-input"
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    placeholder="Adınız Soyadınız"
+                />
+                {errors.name && <div className="error-message">{errors.name}</div>}
+            </div>
+
+            {/* Boyut ve Hamur */}
             <div className="order-size-dough">
               <div className="order-size">
                 <h3 className="field-title">
@@ -196,19 +210,6 @@ export default function Order({ setOrderData }) {
               {errors.toppings && (
                 <div className="error-message">{errors.toppings}</div>
               )}
-            </div>
-            
-            <div className="order-name">
-                <h3 className="field-title">Ad Soyad <span className="required">*</span></h3>
-                <input
-                    className="name-input"
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    placeholder="Adınız Soyadınız"
-                />
-                {errors.name && <div className="error-message">{errors.name}</div>}
             </div>
 
             <div className="order-notes">
