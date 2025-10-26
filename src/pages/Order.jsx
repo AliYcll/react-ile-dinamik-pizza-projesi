@@ -5,6 +5,7 @@ import axios from "axios";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/order.css";
+import { toast } from "react-toastify";
 
 export default function Order({ setOrderData }) {
   const history = useHistory();
@@ -53,15 +54,19 @@ export default function Order({ setOrderData }) {
     const validationErrors = {};
     if (formData.name.length < 3) {
       validationErrors.name = "İsim en az 3 karakter olmalıdır";
+      toast.error("İsim en az 3 karakter olmalıdır");
     }
     if (!formData.size) {
       validationErrors.size = "Pizza boyutu seçin";
+      toast.error("Pizza boyutu seçin");
     }
     if (!formData.hamur) {
       validationErrors.hamur = "Hamur kalınlığı seçin";
+      toast.error("Hamur kalınlığı seçin");
     }
     if (formData.toppings.length < 4 || formData.toppings.length > 10) {
       validationErrors.toppings = "4 ile 10 arasında malzeme seçmelisiniz";
+      toast.error("4 ile 10 arasında malzeme seçmelisiniz");
     }
     setErrors(validationErrors);
     
